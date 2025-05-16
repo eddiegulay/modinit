@@ -1,13 +1,17 @@
 # modinit
 
-A Python package for initializing AI model training repositories with a standardized structure.
+**modinit** is a Python package that helps you quickly scaffold AI model training repositories with a standardized, best-practice structure. It saves you time and ensures consistency across your machine learning projects.
 
-## Features
+## Why use modinit?
 
-- Creates a well-structured project directory for AI model training
-- Follows best practices for machine learning project organization
-- Includes helpful docstrings in all generated files
-- Simple command-line interface
+- **Instant project setup:** Get started with a ready-to-use directory structure in seconds.
+- **Best practices built-in:** Follows common conventions for organizing data, code, configs, and tests.
+- **Docstring templates:** All generated Python files include helpful docstrings.
+- **Easy to use:** Simple command-line interface.
+
+## Demo
+
+![modinit demo](demo/modinit.gif)
 
 ## Installation
 
@@ -17,25 +21,62 @@ pip install modinit
 
 ## Usage
 
+To create a new project, run:
+
 ```bash
 modinit my-project
 ```
 
-This will create a new directory called `my-project` with the following structure:
+This will generate a new directory called `my-project` with a recommended structure for AI/ML projects.
+
+### Example
+
+Below is a real example of using `modinit` to create a project called `voice-rumba`:
+
+```bash
+$ pip install modinit
+$ modinit voice-rumba
+Successfully created project: voice-rumba
+To get started, navigate to the project directory:
+  cd voice-rumba
+```
+
+The generated structure looks like this:
 
 ```
-my-project/
-├── notebooks/            # Jupyter notebooks for experimentation
-├── src/                  # Main source code package
-├── data/                 # Data directory
-│   ├── raw/              # Raw, immutable data
-│   ├── processed/        # Processed data ready for modeling
-│   └── interim/          # Intermediate data that has been transformed
-├── configs/              # Configuration files
-├── tests/                # Unit tests
-├── main.py               # Entry point with CLI for running training/evaluation
-└── requirements.txt      # Project dependencies
+voice-rumba/
+├── README.md
+├── .gitignore
+├── configs/
+│   └── config.yaml
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── interim/
+├── main.py
+├── notebooks/
+│   └── prototype.ipynb
+├── requirements.txt
+├── src/
+│   ├── __init__.py
+│   ├── data.py
+│   ├── evaluate.py
+│   ├── model.py
+│   ├── train.py
+│   └── utils.py
+└── tests/
+    ├── __init__.py
+    ├── test_data.py
+    ├── test_model.py
+    └── test_train.py
 ```
+
+## Features
+
+- Creates a well-structured project directory for AI model training
+- Follows best practices for machine learning project organization
+- Includes helpful docstrings in all generated files
+- Simple command-line interface
 
 ## Development
 
