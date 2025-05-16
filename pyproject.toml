@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "modinit"
-version = "0.1.0"
+version = "0.1.1"
 description = "A tool for initializing AI model training repositories"
 readme = "README.md"
 authors = [{name = "eddiegulay", email = "edgargulay@outlook.com"}]
